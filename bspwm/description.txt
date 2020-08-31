@@ -1,0 +1,1 @@
+using bspwm, a tiling window manager based on binary space partitioning.
