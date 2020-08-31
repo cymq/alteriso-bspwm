@@ -1,2 +1,2 @@
 # alteriso-bspwm
-A bspwm channel for alteriso.
+This is an unofficial bspwm channel for alteriso-2 (Isn't for alteriso-3).
