@@ -1,12 +1,12 @@
 [options]
-#allow_bold = true
-#audible_bell = false
+allow_bold = false
+audible_bell = false
 #bold_is_bright = true
-#cell_height_scale = 1.0
-#cell_width_scale = 1.0
+cell_height_scale = 1.3
+cell_width_scale = 1.0
 clickable_url = true
 dynamic_title = true
-font = Monospace 10
+font = Monospace 12
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -14,7 +14,7 @@ font = Monospace 10
 #scroll_on_keystroke = true
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # and setting it to a negative value means "infinite scrollback"
-scrollback_lines = 10000
+scrollback_lines = 100000
 #search_wrap = true
 #urgent_on_bell = true
 #hyperlinks = false
@@ -26,7 +26,7 @@ scrollback_lines = 10000
 #cursor_blink = system
 
 # "block", "underline" or "ibeam"
-#cursor_shape = block
+cursor_shape = underline
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -41,38 +41,44 @@ scrollback_lines = 10000
 scrollbar = right
 
 [colors]
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
 
-foreground = #d1cdc0
-foreground_bold = #d1cdc0
-background = #24211e
+# special
+foreground      = #dfdab4
+foreground_bold = #dfdab4
+cursor          = #dfdab4
+background      = #17161a
 
-# 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+# black
+color0  = #484b52
+color8  = #828588
 
-# If unset, will reverse foreground and background
-highlight = #2f2f2f
+# red
+color1  = #b86464
+color9  = #c88c8c
 
-# Colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
+# green
+color2  = #9baf70
+color10 = #cbe5a5
+
+# yellow
+color3  = #dfae8f
+color11 = #e0c39d
+
+# blue
+color4  = #7895c2
+color12 = #aec9e0
+
+# magenta
+color5  = #cf93ca
+color13 = #e5b6e3
+
+# cyan
+color6  = #82c0b8
+color14 = #b0e8df
+
+# white
+color7  = #9ba5ae
+color15 = #f1f0ee
 
 [hints]
 #font = Monospace 12

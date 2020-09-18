@@ -99,4 +99,4 @@ fi
 sed -i s/%USERNAME%/${username}/g /etc/lightdm/lightdm.conf
 
 # Set wallpaper
-nitrogen --set-zoom /usr/share/backgrounds/alter.png
+wal -i "/usr/share/backgrounds/alter.png"

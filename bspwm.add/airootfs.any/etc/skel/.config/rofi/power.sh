@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ---------------------------------------------
-#  Alter Linux i3wm edition
+#  Alter Linux bspwm edition
 #  show power menu script for rofi
 #
 #  Watasuke
@@ -15,8 +15,8 @@ declare -A menu_list=(
   ["Shutdown"]="systemctl poweroff"
   ["Reboot"]="systemctl reboot"
   ["Suspend"]="systemctl suspend"
-  ["Lock Screen"]="light-locker-command -l"
-  ["Logout"]="i3-msg exit"
+  ["Lock Screen"]="slock"
+  ["Logout"]="bspwm quit"
 )
 
 

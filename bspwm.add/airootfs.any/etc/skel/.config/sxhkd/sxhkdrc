@@ -1,26 +1,30 @@
-#
-# wm independent hotkeys
-#
+#! /bin/sh
 
-# run terminal emulator
+# THIS IS SXHKD CONFIG FILE
+
+#----------------#
+#  APPLICATIONS  |
+#----------------#
+
+# TERMINAL EMULATOR
 super + Return
 	termite
 
-# run program launcher
+# PROGRAM LAUNCHER
 super + d
 	rofi -show drun
 
-# make sxhkd reload its configuration files
+# RELOAD SXHKD
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# take a screenshot
+# TAKE A SCREENSHOT
 Print
 	scrot
 
-#
-# Volume control
-#
+#------------------#
+#  VOLUME CONTROL  |
+#------------------#
 
 ctrl + alt + j
 	amixer sset Master 1%-
@@ -31,9 +35,9 @@ ctrl + alt + k
 ctrl + alt + m
 	amixer sset Master toggle
 
-#
-# Brightness control
-#
+#----------------------#
+#  BRIGHTNESS CONTROL  |
+#----------------------#
 
 ctrl + alt + h
 	xbacklight -1
@@ -41,103 +45,104 @@ ctrl + alt + h
 ctrl + alt + l
 	xbacklight +1
 
-#
-# bspwm hotkeys
-#
+#-----------------#
+#  BSPWM HOTKEYS  |
+#-----------------#
 
-# restart bspwm
+# RESTART BSPWM
 super + alt + r
 	bspc wm -r
 
-# logout menu
+# LOGOUT MENU
 super + alt + q
 	rofi -show power
 
-# close and kill
+# CLOSE AND KILL
 super + {_,shift + }w
 	bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
+# TOGGLE MONOCLE LAYOUT
 super + m
 	bspc desktop -l next
 
-# swap the current node and the biggest node
+# SWAP THE CURRENT NODE AND THE BIGGEST NODE
 super + g
 	bspc node -s biggest
 
-# hide the cureent node
+# HIDE THE CURRENT NODE
 super + v
 	bspc node -g hidden
 
 super + shift + v
 	bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
 
-#
-# state
-#
+#---------#
+#  STATE  |
+#---------#
 
-# set the window state
+# CHANGE THE WINDOW STATE
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-#
-# focus/swap
-#
+#--------------#
+#  FOCUS/MOVE  |
+#--------------#
 
-# focus the node in the given direction
+# FOCUS/MOVE THE NODE
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,n} {west,south,north,east}
 
-# focus the next/previous node in the current desktop
+# FOCUS THE NEXT/PREVIOUS NODE IN THE CURRENT DESKTOP
 alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local
 
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+# FOCUS THE NEXT/PREVIOUS DESKTOP IN THE CURRENT MONITOR
+super + {left,right}
 	bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
+# FOCUS THE LAST NODE/DESKTOP
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
-# focus the older or newer node in the focus history
-super + {o,i}
+# FOCUS THE OLDER OR NEWER NODE IN THE FOCUS HISTORY
+super + {i,o}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
+# FOCUS OR SEND TO THE GIVEN DESKTOP
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-#
-# preselect
-#
+#-------------#
+#  PRESELECT  |
+#-------------#
 
-# preselect the direction
+# PRESELECT THE DIRECTION
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
-# preselect the ratio
+# PRESELECT THE RATIO
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
-# cancel the preselection for the focused node
+# CANCEL THE PRESELECTION FOR THE FOCUSED NODE
 super + ctrl + space
 	bspc node -p cancel
 
-# cancel the preselection for the focused desktop
+# CANCEL THE PRESELECTION FOR THE FOCUSED DESKTOP
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-# move/resize
-#
+#----------#
+#  RESIZE  |
+#----------#
 
-# expand a window by moving one of its side outward
+# EXPAND A WINDOW
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# contract a window by moving one of its side inward
+# CONTRACT A WINDOW
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+

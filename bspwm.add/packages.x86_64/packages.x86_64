@@ -63,9 +63,9 @@ sxhkd
 slock
 
 # wallpaper
-nitrogen
+python-pywal
 
-# composit
+# composit manager
 picom
 
 # panel
@@ -108,7 +108,6 @@ dmraid
 fsarchiver
 gpm
 gptfdisk
-grml-zsh-config
 hdparm
 lvm2
 mate-polkit
@@ -140,12 +139,20 @@ ttf-hack
 #  shell  |
 #---------#
 
+# zsh
 zsh
 zsh-autosuggestions
 zsh-completions
 zsh-history-substring-search
 zsh-syntax-highlighting
+grml-zsh-config
+
+# powerline
 powerline-go
+
+# lsd
+lsd
+lsd-control
 
 #---------------#
 #  application  |
@@ -173,12 +180,15 @@ scrot
 # image viewer
 feh
 
-# system
+# partion editor
 gparted
 
-# for sysmenu
+# monitor manager
 arandr
+
+# system monitor
 htop
 
 # terminal emulator
 termite
+
