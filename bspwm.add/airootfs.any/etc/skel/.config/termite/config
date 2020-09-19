@@ -2,7 +2,7 @@
 allow_bold = false
 audible_bell = false
 #bold_is_bright = true
-cell_height_scale = 1.3
+cell_height_scale = 1.0
 cell_width_scale = 1.0
 clickable_url = true
 dynamic_title = true
