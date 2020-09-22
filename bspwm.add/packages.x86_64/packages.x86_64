@@ -65,7 +65,7 @@ slock
 # wallpaper
 python-pywal
 
-# composit manager
+# compositor
 picom
 
 # panel
