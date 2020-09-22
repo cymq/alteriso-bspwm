@@ -1,0 +1,16 @@
+#
+# Alter Linux bspwm edition package list
+#
+# cymq
+# Twitter: @cymq0686
+# Email  : cymq0686@gmail.com
+#
+# (c) 2020 Fascode Network.
+#
+# Japanese packages
+
+# fcitx
+fcitx
+fcitx-configtool
+fcitx-mozc
+fcitx-qt5
