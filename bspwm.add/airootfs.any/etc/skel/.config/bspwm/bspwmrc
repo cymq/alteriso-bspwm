@@ -44,5 +44,5 @@ fcitx &
 picom &
 
 # WALLPAPER
-wal -R &
+wal -i /usr/share/backgrounds/alter-nochr.png &
 
