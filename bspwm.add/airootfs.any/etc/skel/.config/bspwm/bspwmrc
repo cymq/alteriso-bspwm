@@ -28,6 +28,13 @@ bspc config gapless_monocle      true
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+#------------#
+#  XSETROOT  |
+#------------#
+
+# CURSOR
+xsetroot -cursor_name left_ptr
+
 #-------------#
 #  AUTOSTART  |
 #-------------#
