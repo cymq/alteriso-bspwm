@@ -50,15 +50,15 @@ ctrl + alt + l
 #-----------------#
 
 # RESTART BSPWM
-super + alt + r
+super + ctrl + r
 	bspc wm -r
 
 # LOGOUT MENU
-super + alt + q
+super + ctrl + q
 	rofi -show power
 
 # CLOSE AND KILL
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # TOGGLE MONOCLE LAYOUT
