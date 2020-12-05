@@ -97,7 +97,7 @@ alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local
 
 # FOCUS THE NEXT/PREVIOUS DESKTOP IN THE CURRENT MONITOR
-super + {left,right}
+super + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
 # FOCUS THE LAST NODE/DESKTOP
