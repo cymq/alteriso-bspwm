@@ -12,7 +12,7 @@ super + Return
 
 # PROGRAM LAUNCHER
 super + d
-	rofi -show drun
+	dmenu_run -nb "#101411" -sb "#9c978c" -fn "Monospace-10" -p "Command" -l 16
 
 # RELOAD SXHKD
 super + Escape
@@ -53,9 +53,9 @@ ctrl + alt + l
 super + ctrl + r
 	bspc wm -r
 
-# LOGOUT MENU
+# LOGOUT
 super + ctrl + q
-	rofi -show power
+	bspc quit
 
 # CLOSE AND KILL
 super + {_,shift + }q

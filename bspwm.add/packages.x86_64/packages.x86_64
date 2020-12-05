@@ -72,7 +72,7 @@ picom
 tint2
 
 # launcher
-rofi
+dmenu
 
 # theme picker
 lxappearance
